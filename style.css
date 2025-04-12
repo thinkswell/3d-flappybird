@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #70c5ce;
+    font-family: 'Press Start 2P', cursive;
+}
+
+canvas {
+    display: block;
+}
+
+/* UI Styles */
+.ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.ui-element {
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: 2px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+    background-color: #ff9800;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 0.5rem;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #e65100;
+}
+
+.button:hover {
+    background-color: #fb8c00;
+}
+
+.button:active {
+    background-color: #e65100;
+    border-bottom-width: 2px;
+    transform: translateY(2px);
+}
+
+#score,
+#highScore {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#highScore {
+    top: 60px;
+    font-size: 1rem;
+}
+
+#startScreen,
+#gameOverScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#gameOverScreen {
+    display: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Style for the fullscreen button */
+#fullscreenButton {
+    position: absolute;
+    bottom: 3rem;
+    /* Adjusted bottom to make space for footer */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    background-color: #607d8b;
+    border-bottom-color: #37474f;
+    pointer-events: auto;
+}
+
+#fullscreenButton:hover {
+    background-color: #546e7a;
+}
+
+#fullscreenButton:active {
+    background-color: #37474f;
+}
+
+/* Footer Style */
+footer {
+    position: absolute;
+    bottom: 0.5rem;
+    /* Position near the bottom */
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 15;
+    /* Below fullscreen button but above canvas */
+    pointer-events: none;
+    /* Allow clicks through footer background */
+}
+
+footer a {
+    pointer-events: auto;
+    /* Make only the link clickable */
+}

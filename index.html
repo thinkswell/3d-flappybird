@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Flappy Bird - Enhanced Runner (Footer)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="ui-overlay">
+        <div id="score" style="display: none;">Score: 0</div>
+        <div id="highScore" style="display: none;">High Score: 0</div>
+        <div id="startScreen" class="ui-element">
+            <h1>3D Flappy Runner</h1>
+            <button id="startButton" class="button">Start</button>
+        </div>
+        <div id="gameOverScreen" class="ui-element" style="display: none;">
+            <h1>Game Over</h1>
+            <p id="finalScore">Your Score: 0</p>
+            <p id="gameOverHighScore">High Score: 0</p>
+            <button id="restartButton" class="button">Restart</button>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <button id="fullscreenButton" class="button">Fullscreen</button>
+
+    <footer class="text-xs text-white opacity-75">
+        Made with ❤️ by
+        <a href="https://krishnav.netlify.app/" target="_blank" rel="noopener noreferrer"
+           class="font-bold hover:text-yellow-300 transition-colors pointer-events-auto">
+            @krishna
+        </a>
+    </footer>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
